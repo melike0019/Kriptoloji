@@ -1,0 +1,17 @@
+# Python derleme dosyaları
+__pycache__/
+*.py[cod]
+
+# Sanal ortam (varsa)
+venv/
+env/
+
+# Anahtar dosyaları (BUNLARI ASLA YÜKLEME!)
+*.pem
+*.key
+private_key.pem
+public_key.pem
+
+# Veritabanı veya loglar
+*.log
+*.db
