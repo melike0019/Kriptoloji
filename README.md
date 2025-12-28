@@ -66,7 +66,7 @@ Tarayıcınızda otomatik olarak açılacaktır (genellikle `http://localhost:85
 **Özellikler:**
 - Klasik kriptografi algoritmalarını seçip test edebilirsiniz
 - Modern kriptografi (AES/DES) algoritmalarını deneyebilirsiniz
-- Manuel AES implementasyonunu görebilirsiniz
+- Manuel DES implementasyonunu görebilirsiniz
 - Şifreleme ve çözme işlemlerini gerçekleştirebilirsiniz
 
 ### İstemci-Sunucu Uygulaması
@@ -100,36 +100,6 @@ python client_server/client.py
 6. Sunucu simetrik anahtarı çözer
 7. Sunucu mesajı çözer ve gösterir
 
-### Manuel Implementasyon Testleri
-
-**Manuel AES testi:**
-```bash
-python manual_aes/test_manual_aes.py
-```
-
-**Manuel DES testi:**
-```bash
-python manual_des/test_manual_des.py
-```
-
-Veya Python kodunda:
-
-```python
-from manual_aes import manual_aes_encrypt, manual_aes_decrypt
-from manual_des import manual_des_encrypt, manual_des_decrypt
-
-# Manuel AES
-plaintext = "Hello World"
-key_aes = "MySecretKey1234"
-ciphertext_aes = manual_aes_encrypt(plaintext, key_aes)
-decrypted_aes = manual_aes_decrypt(ciphertext_aes, key_aes)
-
-# Manuel DES
-key_des = "MyKey123"
-ciphertext_des = manual_des_encrypt(plaintext, key_des)
-decrypted_des = manual_des_decrypt(ciphertext_des, key_des)
-```
-
 ## 📁 Proje Yapısı
 
 ```
@@ -149,10 +119,6 @@ Kriptoloji/
 ├── modern_ciphers/             # Modern şifreleme algoritmaları
 │   ├── aes_des.py
 │   └── __init__.py
-├── manual_aes/                 # Manuel AES implementasyonu
-│   ├── manual_aes.py
-│   ├── test_manual_aes.py
-│   └── __init__.py
 ├── manual_des/                 # Manuel DES implementasyonu
 │   ├── manual_des.py
 │   ├── test_manual_des.py
@@ -165,15 +131,6 @@ Kriptoloji/
 ├── requirements.txt            # Python bağımlılıkları
 └── README.md                   # Bu dosya
 ```
-
-## 🔐 Güvenlik Notları
-
-- Bu proje **eğitim amaçlıdır** ve gerçek üretim ortamlarında kullanılmamalıdır
-- Manuel AES implementasyonu gerçek AES standardını birebir uygulamaz
-- Güvenli iletişim için gerçek uygulamalarda ek güvenlik önlemleri alınmalıdır
-- Anahtarların güvenli saklanması ve yönetimi kritik öneme sahiptir
-
-## 🧪 Test ve Analiz
 
 ### Wireshark ile Paket Analizi
 
@@ -189,22 +146,11 @@ Kriptoloji/
 
 - ✅ 10 farklı klasik kriptografi algoritması
 - ✅ AES-128 ve DES modern şifreleme algoritmaları (kütüphaneli)
-- ✅ Manuel AES ve DES implementasyonları (kütüphanesiz, eğitim amaçlı)
+- ✅ Manuel DES implementasyonları (kütüphanesiz, eğitim amaçlı)
 - ✅ RSA ile güvenli anahtar dağıtımı
 - ✅ İstemci-sunucu şifreli haberleşme (AES/DES + RSA)
 - ✅ Kullanıcı dostu Streamlit arayüzü
 - ✅ Terminal tabanlı istemci-sunucu uygulaması
 - ✅ Wireshark ile paket analizi desteği
 
-## 👨‍💻 Geliştirici
-
-Bu proje kriptoloji dersi final projesi olarak geliştirilmiştir.
-
-## 📄 Lisans
-
-Bu proje eğitim amaçlıdır.
-
----
-
-**Not:** Projeyi kullanmadan önce `requirements.txt` dosyasındaki tüm bağımlılıkların yüklendiğinden emin olun.
 
