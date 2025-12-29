@@ -50,7 +50,7 @@ PC2_TABLE = [
 # Key Shift Schedule (Hangi turda kaç bit kayacak)
 SHIFT_SCHEDULE = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1]
 
-# S-Box'lar (Standart DES S-Box Değerleri - Senin kodundakiyle aynıdır ama formatladım)
+# S-Box'lar (Standart DES S-Box Değerleri )
 S_BOXES = [
     # S1
     [[14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7],
